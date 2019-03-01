@@ -1,0 +1,29 @@
+<!-- header -->
+<app-header></app-header>
+<!-- end header -->
+
+<!-- content -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>chọn phim</h5>
+        </div>
+        <ul class="list-group list-group-flush" *ngFor="let phim of danhSachPhimDangChieu">
+          <app-item-phim-dat-ve [phim]="phim"></app-item-phim-dat-ve>
+        </ul>
+      </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+  </div>
+</div>
+<!-- end content -->
+
+<!-- footer -->
+<div class="container">
+  <app-footer></app-footer>
+</div>
+<!-- end footer -->
