@@ -1,0 +1,22 @@
+<div class="text-center my-4">
+  <button type="button" class="btn btn-success" (click)="hienStatusTinTuc('dienanh')">Điện ảnh</button>
+  <button type="button" class="btn" (click)="hienStatusTinTuc('review')">Review</button>
+  <button type="button" class="btn" (click)="hienStatusTinTuc('khuyenmai')">Khuyến mãi</button>
+</div>
+<div class="row" [ngSwitch]="statusTinTuc">
+  <div class="col-12" *ngSwitchCase="'dienanh'">
+    <app-dien-anh>
+
+    </app-dien-anh>
+  </div>
+  <div class="col-12" *ngSwitchCase="'review'">
+    <app-review>
+
+    </app-review>
+  </div>
+  <div class="col-12" *ngSwitchCase="'khuyenmai'">
+    <app-khuyen-mai>
+
+    </app-khuyen-mai>
+  </div>
+</div>

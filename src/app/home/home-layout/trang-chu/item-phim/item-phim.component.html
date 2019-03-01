@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card_img">
+        <img class="card-img-top" [src]="phim.HinhAnh" alt="Card image cap">
+        <div class="card_overlay">
+            <h4 id="line_clamp_1" class="card-text">{{phim.TenPhim}}</h4>
+            <p id="line_clamp_2">{{phim.MoTa}}</p>
+            <div class="overlay_button">
+                <button type="button" class="btn btnChiTiet" [routerLink]="['/chitiet', phim.MaPhim]">chi tiết</button>
+                <button type="button" class="btn btnMuaVe">mua vé</button>
+                <button type="button" class="btn btnTrailer"><i class="fa fa-play-circle-o"></i> xem trailer</button>
+            </div>
+        </div>
+    </div>
+    <h3>{{phim.TenPhim}}</h3>
+</div>

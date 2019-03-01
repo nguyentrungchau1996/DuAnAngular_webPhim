@@ -1,0 +1,65 @@
+.container {
+    .row {
+        .col-5 {
+            img {
+                width: 22rem;
+            }
+        }
+        .col-7 {
+            box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3), 0 0 50px 0 rgba(0, 0, 0, 0.4) inset;
+            padding: 2rem;
+            .row {
+                .col-12 {
+                    position: relative;
+                    a {
+                        position: absolute;
+                        bottom: -1rem;                        
+                        color: black;
+                        text-decoration: none;
+                        font-size: 1.25rem;
+                        transition: all 0.3s;
+                        -webkit-transition: all 0.3s;
+                        -moz-transition: all 0.3s;
+                        -ms-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                        padding: 1rem;
+                        &:hover {
+                            position: absolute;
+                            bottom: -1rem;                            
+                            font-size: 1.5rem;
+                            color: #CEA430;
+                            transition: all 0.3s;
+                            -webkit-transition: all 0.3s;
+                            -moz-transition: all 0.3s;
+                            -ms-transition: all 0.3s;
+                            -o-transition: all 0.3s;
+                        }
+                    }
+                    a.thongTin{
+                        left: 12.25rem;
+                        &:hover {
+                            left: 12.25rem;
+                        }
+                    }
+                    a.lichChieu {
+                        right: 12.25rem;
+                        &:hover{
+                            right: 12.25rem;
+                        }
+                    }
+                    h4 {
+                        font-size: 2.25rem;
+                        font-weight: 600;
+                        margin-top: 0.75rem;
+                    }
+                    p {
+                        font-size: 1.1rem;
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

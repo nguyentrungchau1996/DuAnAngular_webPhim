@@ -1,0 +1,46 @@
+<!-- header -->
+<app-header>
+
+</app-header>
+<!-- end header -->
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-5">
+      <img [src]="chiTietPhim.HinhAnh" alt="">
+    </div>
+    <div class="col-7">
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <a class="thongTin" href="">Thông tin</a>
+          <a class="lichChieu" href="">Lịch chiếu</a>
+        </div>
+        <div class="col-12">
+          <h4 class="mb-4">{{chiTietPhim.TenPhim}}</h4>
+          <p class="lead">Khởi chiếu: <span>{{chiTietPhim.NgayKhoiChieu | date: "dd-MM-yyyy"}}</span></p>
+          <p class="lead">Thể loại: <span>Hành động</span></p>
+          <p class="lead">Quốc gia: <span>Việt Nam</span></p>
+          <p class="lead">Diễn viên: <span> Noomi Rapace, Olivia Jewson, Abdellatif Chaouqi</span></p>
+          <p class="lead">Đạo diễn: <span>Vicky Jewson</span></p>
+          <p class="lead">Nội dung phim: <span>{{chiTietPhim.MoTa}}</span></p>
+          <p class="lead">
+            Đánh giá: 
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div class="container">
+  <app-footer>
+
+  </app-footer>
+</div>
+<!-- end footer -->
