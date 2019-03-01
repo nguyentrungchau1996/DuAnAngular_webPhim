@@ -1,10 +1,22 @@
 <li class="list-group-item">
   <div class="row">
     <div class="col-4">
-      <img [src]="phim.HinhAnh" alt="">
+      <div class="img">
+        <img [src]="phim.HinhAnh" alt="">
+        <a href="">
+          <i class="fa fa-play-circle-o text-white"></i>
+        </a>
+        <div class="img_overlay">
+
+        </div>
+      </div>
     </div>
     <div class="col-8">
       <p>{{phim.TenPhim}}</p>
+      <div>
+        <button type="button" class="btn btnChiTiet mr-2">Chi tiết</button>
+        <button type="button" class="btn btnChonPhim">Chọn phim</button>
+      </div>
     </div>
-  </div>  
+  </div>
 </li>

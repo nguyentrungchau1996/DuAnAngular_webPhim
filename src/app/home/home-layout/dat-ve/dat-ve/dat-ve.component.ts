@@ -9,6 +9,8 @@ import { itemPhim } from 'src/app/_core/models/itemPhim';
 })
 export class DatVeComponent implements OnInit {
   danhSachPhimDangChieu: itemPhim[] = [];
+  chiTietPhim: itemPhim[] = [];
+  maPhim: string = "";
   constructor(private _httpClient: PhimApiService) { }
 
   ngOnInit() {
@@ -19,5 +21,4 @@ export class DatVeComponent implements OnInit {
       }
     )
   }
-
 }

@@ -1,0 +1,22 @@
+.container{
+    .row{
+        .col-6{
+            .card{
+                .card-header{
+                    background-color: #CEA430;
+                    h5{
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                        font-size: 1.15rem;
+                    }
+                }
+                .card-body {
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
