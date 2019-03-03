@@ -14,8 +14,8 @@
     <div class="col-8">
       <p>{{phim.TenPhim}}</p>
       <div>
-        <button type="button" class="btn btnChiTiet mr-2">Chi tiết</button>
-        <button type="button" class="btn btnChonPhim">Chọn phim</button>
+        <button type="button" class="btn btnChiTiet mr-2" [routerLink]="['/chitiet', phim.MaPhim]">Chi tiết</button>
+        <button type="button" class="btn btnChonPhim" (click)="chonPhim()" [routerLink]="['/datve/chonphim', phim.MaPhim]">Chọn phim</button>
       </div>
     </div>
   </div>

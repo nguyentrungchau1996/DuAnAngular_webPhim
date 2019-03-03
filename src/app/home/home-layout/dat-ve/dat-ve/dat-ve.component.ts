@@ -9,14 +9,16 @@ import { itemPhim } from 'src/app/_core/models/itemPhim';
 })
 export class DatVeComponent implements OnInit {
   danhSachPhimDangChieu: itemPhim[] = [];
-  chiTietPhim: itemPhim[] = [];
-  maPhim: string = "";
+  chuaChon: boolean = true;
   constructor(private _httpClient: PhimApiService) { }
+
+  chonPhim(trangThai: any){
+    this.chuaChon = trangThai;
+  }
 
   ngOnInit() {
     this._httpClient.getDanhSachPhimDangChieu().subscribe(
       (res: any) => {
-        console.log(res);
         this.danhSachPhimDangChieu = res;
       }
     )
