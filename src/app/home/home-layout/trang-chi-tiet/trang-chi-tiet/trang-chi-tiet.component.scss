@@ -11,7 +11,7 @@
             .row {
                 .col-12 {
                     position: relative;
-                    a {
+                    button {
                         position: absolute;
                         bottom: -1rem;                        
                         color: black;
@@ -35,13 +35,13 @@
                             -o-transition: all 0.3s;
                         }
                     }
-                    a.thongTin{
+                    button.thongTin{
                         left: 12.25rem;
                         &:hover {
                             left: 12.25rem;
                         }
                     }
-                    a.lichChieu {
+                    button.lichChieu {
                         right: 12.25rem;
                         &:hover{
                             right: 12.25rem;

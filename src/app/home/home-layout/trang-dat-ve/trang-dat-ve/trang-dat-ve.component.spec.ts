@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ItemPhimDatVeComponent } from './item-phim-dat-ve.component';
+import { TrangDatVeComponent } from './trang-dat-ve.component';
 
-describe('ItemPhimDatVeComponent', () => {
-  let component: ItemPhimDatVeComponent;
-  let fixture: ComponentFixture<ItemPhimDatVeComponent>;
+describe('TrangDatVeComponent', () => {
+  let component: TrangDatVeComponent;
+  let fixture: ComponentFixture<TrangDatVeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ItemPhimDatVeComponent ]
+      declarations: [ TrangDatVeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ItemPhimDatVeComponent);
+    fixture = TestBed.createComponent(TrangDatVeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

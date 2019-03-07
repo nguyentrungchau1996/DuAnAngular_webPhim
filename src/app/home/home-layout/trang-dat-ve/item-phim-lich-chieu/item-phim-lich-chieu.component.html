@@ -1,0 +1,8 @@
+<div *ngFor="let lichchieu of chiTietPhim.LichChieu">
+  <div class="card">
+    <div class="card-body">
+      <span class="mr-4">{{lichchieu.NgayChieuGioChieu | date: "dd-MM-yyyy"}}</span>
+      <button type="button" class="btn">{{lichchieu.NgayChieuGioChieu | date: "hh : mm"}}</button>
+    </div>
+  </div>
+</div>

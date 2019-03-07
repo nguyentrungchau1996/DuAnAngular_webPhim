@@ -9,14 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { TrangChiTietComponent } from './home/home-layout/trang-chi-tiet/trang-chi-tiet/trang-chi-tiet.component';
 import { TrangChuComponent } from './home/home-layout/trang-chu/trang-chu/trang-chu.component';
-import { DatVeComponent } from './home/home-layout/dat-ve/dat-ve/dat-ve.component';
-import { ItemPhimChonComponent } from './home/home-layout/dat-ve/item-phim-chon/item-phim-chon.component';
+import { TrangDatVeComponent } from './home/home-layout/trang-dat-ve/trang-dat-ve/trang-dat-ve.component';
+import { ItemPhimLichChieuComponent } from './home/home-layout/trang-dat-ve/item-phim-lich-chieu/item-phim-lich-chieu.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: TrangChuComponent},
   { path: 'chitiet/:maphim', component: TrangChiTietComponent},
-  { path: 'datve', component: DatVeComponent, children: [
-    {path: 'chonphim/:maphim', component: ItemPhimChonComponent}
+  { path: 'datve', component: TrangDatVeComponent, children: [
+    {path: 'chonphim/:maphim', component: ItemPhimLichChieuComponent}
   ]}
 ]
 
