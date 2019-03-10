@@ -16,4 +16,7 @@ export class PhimApiService {
   getChiTietPhim(MaPhim) {
     return this._httpClient.get(`http://svcy2.myclass.vn/api/QuanLyPhim/LayChiTietPhim?MaPhim=${MaPhim}`);
   }
+  getChiTietPhongVe(MaLichChieu) {
+    return this._httpClient.get(`http://sv2.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaLichChieu=${MaLichChieu}`);
+  }
 }

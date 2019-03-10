@@ -11,11 +11,11 @@
     </div>
     <div class="col-7">
       <div class="row mt-4">
-        <div class="col-12 text-center">
-          <button type="button" class="btn thongTin">Thông tin</button>
-          <button type="button" class="btn lichChieu">Lịch chiếu</button>         
+        <div class="col-12 text-center mb-2">
+          <button type="button" class="btn btnTitle btnThongTin" [ngClass]='{"active": sttThongTin}' (click)="hienThongTin()">Thông tin</button>
+          <button type="button" class="btn btnTitle btnLichChieu" [ngClass]='{"active": !sttThongTin}' (click)="hienLichChieu()">Lịch chiếu</button>         
         </div>
-        <div class="col-12">
+        <div class="col-12" *ngIf="sttThongTin; else lichChieu">
           <h4 class="mb-4">{{chiTietPhim.TenPhim}}</h4>
           <p class="lead">Khởi chiếu: <span>{{chiTietPhim.NgayKhoiChieu | date: "dd-MM-yyyy"}}</span></p>
           <p class="lead">Thể loại: <span>Hành động</span></p>
@@ -32,6 +32,16 @@
             <i class="fa fa-star-half-o"></i>
           </p>
         </div>
+        <ng-template #lichChieu>
+          <div class="col-12" *ngFor="let lichChieu of chiTietPhim.LichChieu">
+            <div class="card mt-2">
+              <div class="card-body">
+                <span class="mr-4">{{lichChieu.NgayChieuGioChieu | date: 'dd - MM - yyyy'}}</span>
+                <button type="button" class="btn btnGioChieu">{{lichChieu.NgayChieuGioChieu | date: "hh : mm"}}</button>
+              </div>
+            </div>
+          </div>
+        </ng-template>        
       </div>
     </div>
   </div>

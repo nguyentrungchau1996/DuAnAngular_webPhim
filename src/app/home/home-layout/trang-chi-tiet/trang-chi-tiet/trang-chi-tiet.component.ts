@@ -11,7 +11,16 @@ import { ActivatedRoute } from '@angular/router';
 export class TrangChiTietComponent implements OnInit {
   maPhim: string = "";
   chiTietPhim: itemPhim[] = [];
+  sttThongTin: boolean = true;
   constructor(private _activatedRoutes: ActivatedRoute, private _chiTietPhim: PhimApiService) { }
+
+  hienThongTin() {
+    this.sttThongTin = true;
+  }
+
+  hienLichChieu(){
+    this.sttThongTin = false;
+  }
 
   ngOnInit() {
     this._activatedRoutes.params.subscribe(
