@@ -1,0 +1,46 @@
+<!-- header -->
+<app-header></app-header>
+<!-- end header -->
+
+<!-- danh sách ghế -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 screen text-center">
+      Màn hình
+    </div>
+    <div class="col-md-7 text-center">
+      <h1 class="display-4 text-center">Danh sách ghế</h1>
+      <span *ngFor="let ghe of danhSachGhe; let stt = index">
+        <app-item-ghe [ghe]="ghe" (eventDatGhe)="DatGhe($event)">
+        </app-item-ghe>
+        <br *ngIf="(stt+1) % 8 == 0" />
+      </span>
+      <div class="col-12 notes">
+          <div class="row">
+            <div class="col-4">
+              <span class="mr-3"><button class="btn">1</button> Ghế trống</span>
+            </div>
+            <div class="col-4">
+              <span class="mr-3"><button class="btn btnGheDangDat">1</button> Ghế đang chọn</span>
+            </div>
+            <div class="col-4">
+              <span><button class="btn btnGheDaDat">1</button> Ghế đã có người chọn</span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4 mx-auto">
+      <h1 class="display-4 text-center">Ghế đã chọn</h1>
+      <p class="lead" *ngFor="let ghe of mangGheDangDat">Ghế
+        <span>: {{ghe.ten}} - {{ghe.gia}} VND</span>  
+        <span class="alert alert-danger ml-2" (click)="HuyGhe(ghe.ten)">Hủy</span>
+      </p>
+      <h2 class="display-5 text-center">Tổng cộng: {{tongTien}} VNĐ</h2>
+    </div>
+  </div>
+</div>
+<!-- end danh sách ghế -->
+
+<!-- footer -->
+<app-footer></app-footer>
+<!-- end footer -->

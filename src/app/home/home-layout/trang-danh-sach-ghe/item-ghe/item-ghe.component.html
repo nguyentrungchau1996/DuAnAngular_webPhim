@@ -1,0 +1,8 @@
+<button 
+    type="button" 
+    class="btnGhe btn"
+    [disabled]="ghe.DaDat"
+    [ngClass]="{'btnGheDangDat': dangDat, 'btnGheDaDat': ghe.DaDat}"
+    (click)="DatGhe()"
+    >{{ghe.TenGhe}}
+</button>

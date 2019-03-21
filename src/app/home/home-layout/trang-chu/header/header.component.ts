@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { itemPhim } from 'src/app/_core/models/itemPhim';
+import { PhimApiService } from 'src/app/services/phim-api.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  DanhSachPhimDangChieu: itemPhim[] = [];
+  constructor(private _danhSachPhim: PhimApiService) { }
 
   ngOnInit() {
+    this._danhSachPhim.getDanhSachPhimDangChieu().subscribe(
+      (res: any) => {
+        this.DanhSachPhimDangChieu = res;
+        console.log(this.DanhSachPhimDangChieu);
+      },
+      (err: any) => {
+        console.log(err);
+      }
+    )
   }
 
 }

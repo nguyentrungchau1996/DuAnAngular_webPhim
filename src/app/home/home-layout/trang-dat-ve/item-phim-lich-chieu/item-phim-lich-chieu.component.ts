@@ -16,11 +16,9 @@ export class ItemPhimLichChieuComponent implements OnInit {
   ngOnInit() {
     this._activatedRoute.params.subscribe(
       (res: any) => {        
-        this.MaPhim = res.maphim;
-        console.log(this.MaPhim);
+        this.MaPhim = res.maphim;        
         this._chiTietPhim.getChiTietPhim(this.MaPhim).subscribe(
-          (res: any) => {
-            console.log(res);
+          (res: any) => {            
             this.chiTietPhim = res;
           }
         )

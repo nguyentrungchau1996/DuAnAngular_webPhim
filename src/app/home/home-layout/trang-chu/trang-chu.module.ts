@@ -17,6 +17,7 @@ import { LoaiTinTucComponent } from './loai-tin-tuc/loai-tin-tuc.component';
 import { DienAnhComponent } from './dien-anh/dien-anh.component';
 import { ItemTinTucComponent } from './item-tin-tuc/item-tin-tuc.component';
 import { RouterModule } from '@angular/router';
+import { ItemPhimHeaderComponent } from './item-phim-header/item-phim-header.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RouterModule } from '@angular/router';
     LoaiTinTucComponent,
     DienAnhComponent,
     ItemTinTucComponent,
+    ItemPhimHeaderComponent,
   ],
   imports: [
     CommonModule, HttpClientModule, CarouselModule, RouterModule
@@ -52,7 +54,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     LoaiTinTucComponent,
     DienAnhComponent,
-    ItemTinTucComponent
+    ItemTinTucComponent,
+    ItemPhimHeaderComponent
   ]
 })
 export class TrangChuModule { }

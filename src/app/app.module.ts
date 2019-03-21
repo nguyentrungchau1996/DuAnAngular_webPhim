@@ -11,16 +11,15 @@ import { TrangChiTietComponent } from './home/home-layout/trang-chi-tiet/trang-c
 import { TrangChuComponent } from './home/home-layout/trang-chu/trang-chu/trang-chu.component';
 import { TrangDatVeComponent } from './home/home-layout/trang-dat-ve/trang-dat-ve/trang-dat-ve.component';
 import { ItemPhimLichChieuComponent } from './home/home-layout/trang-dat-ve/item-phim-lich-chieu/item-phim-lich-chieu.component';
-import { DanhSachGheComponent } from './home/home-layout/trang-dat-ve/danh-sach-ghe/danh-sach-ghe.component';
+import { TrangDanhSachGheComponent } from './home/home-layout/trang-danh-sach-ghe/trang-danh-sach-ghe/trang-danh-sach-ghe.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: TrangChuComponent},
+  { path: '', component: TrangChuComponent},
   { path: 'chitiet/:maphim', component: TrangChiTietComponent},
   { path: 'datve', component: TrangDatVeComponent, children: [
-    {path: 'chonphim/:maphim', component: ItemPhimLichChieuComponent, children: [
-      {path: 'danhsachghe/:maphongve', component: DanhSachGheComponent}
-    ]}
-  ]}
+    {path: 'chonphim/:maphim', component: ItemPhimLichChieuComponent}
+  ]},
+  {path: 'danhsachghe/:malichchieu', component: TrangDanhSachGheComponent}
 ]
 
 @NgModule({

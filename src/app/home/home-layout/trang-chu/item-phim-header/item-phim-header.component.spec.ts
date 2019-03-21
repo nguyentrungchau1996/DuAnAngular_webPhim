@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DanhSachGheComponent } from './danh-sach-ghe.component';
+import { ItemPhimHeaderComponent } from './item-phim-header.component';
 
-describe('DanhSachGheComponent', () => {
-  let component: DanhSachGheComponent;
-  let fixture: ComponentFixture<DanhSachGheComponent>;
+describe('ItemPhimHeaderComponent', () => {
+  let component: ItemPhimHeaderComponent;
+  let fixture: ComponentFixture<ItemPhimHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DanhSachGheComponent ]
+      declarations: [ ItemPhimHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DanhSachGheComponent);
+    fixture = TestBed.createComponent(ItemPhimHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

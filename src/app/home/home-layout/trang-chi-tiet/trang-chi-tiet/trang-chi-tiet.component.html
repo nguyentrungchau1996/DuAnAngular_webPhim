@@ -4,14 +4,14 @@
 </app-header>
 <!-- end header -->
 
-<div class="container my-5">
+<div class="container">
   <div class="row">
     <div class="col-5">
       <img [src]="chiTietPhim.HinhAnh" alt="">
     </div>
     <div class="col-7">
       <div class="row mt-4">
-        <div class="col-12 text-center mb-2">
+        <div class="col-12 text-center mb-4">
           <button type="button" class="btn btnTitle btnThongTin" [ngClass]='{"active": sttThongTin}' (click)="hienThongTin()">Thông tin</button>
           <button type="button" class="btn btnTitle btnLichChieu" [ngClass]='{"active": !sttThongTin}' (click)="hienLichChieu()">Lịch chiếu</button>         
         </div>
@@ -34,10 +34,10 @@
         </div>
         <ng-template #lichChieu>
           <div class="col-12" *ngFor="let lichChieu of chiTietPhim.LichChieu">
-            <div class="card mt-2">
+            <div class="card">
               <div class="card-body">
                 <span class="mr-4">{{lichChieu.NgayChieuGioChieu | date: 'dd - MM - yyyy'}}</span>
-                <button type="button" class="btn btnGioChieu">{{lichChieu.NgayChieuGioChieu | date: "hh : mm"}}</button>
+                <button type="button" [routerLink]="['/danhsachghe', lichChieu.MaLichChieu]" class="btn btnGioChieu">{{lichChieu.NgayChieuGioChieu | date: "hh : mm"}}</button>
               </div>
             </div>
           </div>
@@ -48,9 +48,5 @@
 </div>
 
 <!-- footer -->
-<div class="container">
-  <app-footer>
-
-  </app-footer>
-</div>
+<app-footer></app-footer>
 <!-- end footer -->
