@@ -8,15 +8,18 @@
   <div class="row">
     <div class="col-5">
       <img [src]="chiTietPhim.HinhAnh" alt="">
+      <div class="img_overlay">
+        <i class="fa fa-play-circle-o"></i>
+      </div>
     </div>
-    <div class="col-7">
+    <div class="col-7" id="div_scroller">
       <div class="row mt-4">
         <div class="col-12 text-center mb-4">
           <button type="button" class="btn btnTitle btnThongTin" [ngClass]='{"active": sttThongTin}' (click)="hienThongTin()">Thông tin</button>
           <button type="button" class="btn btnTitle btnLichChieu" [ngClass]='{"active": !sttThongTin}' (click)="hienLichChieu()">Lịch chiếu</button>         
         </div>
         <div class="col-12" *ngIf="sttThongTin; else lichChieu">
-          <h4 class="mb-4">{{chiTietPhim.TenPhim}}</h4>
+          <h4 class="mb-4 text-center">{{chiTietPhim.TenPhim}}</h4>
           <p class="lead">Khởi chiếu: <span>{{chiTietPhim.NgayKhoiChieu | date: "dd-MM-yyyy"}}</span></p>
           <p class="lead">Thể loại: <span>Hành động</span></p>
           <p class="lead">Quốc gia: <span>Việt Nam</span></p>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PhimApiService } from 'src/app/services/phim-api.service';
 
 @Component({
   selector: 'app-item-phim-header',
@@ -10,6 +11,7 @@ export class ItemPhimHeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

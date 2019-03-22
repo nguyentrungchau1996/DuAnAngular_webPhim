@@ -1,1 +1,7 @@
-<img [src]="phim.HinhAnh" alt="">
+<div class="img_item">
+    <img [src]="phim.HinhAnh" alt="">
+    <h5>{{phim.TenPhim}}</h5>
+    <div class="background_overlay">
+        <button type="button" class="btn btnChon" [routerLink]="['/chitiet', phim.MaPhim]">CHỌN</button>
+    </div>
+</div>

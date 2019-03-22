@@ -8,7 +8,7 @@ export class PhimApiService {
 
   constructor(private _httpClient: HttpClient) { }
   getDanhSachPhimDangChieu() {
-    return this._httpClient.get("http://svcy2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP06");
+    return this._httpClient.get("http://svcy2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP03");
   }
   getDanhSachPhimSapChieu() {
     return this._httpClient.get("http://svcy2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP03");

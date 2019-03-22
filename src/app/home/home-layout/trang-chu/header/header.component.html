@@ -29,13 +29,13 @@
               </li>
               <li class="nav-item nav_title_phim">
                 <a class="nav-link" href="#">Phim</a>
-                <div class="phim_overlay">
+                <div class="phim_overlay scroller" id="scroller_style">
                   <h5>Phim đang chiếu</h5>
                   <div class="item_phim">
                     <div class="row">
-                      <div class="col-3 text-center my-2" *ngFor="let phim of DanhSachPhimDangChieu">
+                      <div class="col-4 text-center my-2" *ngFor="let phim of DanhSachPhimDangChieu">
                         <app-item-phim-header [phim]="phim"></app-item-phim-header>
-                      </div>
+                      </div>                      
                     </div>                    
                   </div>
                 </div>
