@@ -9,20 +9,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./item-phim-lich-chieu.component.scss']
 })
 export class ItemPhimLichChieuComponent implements OnInit {
-  MaPhim: string = "";
+  MaPhim = '';
   chiTietPhim: itemPhim[] = [];
   constructor(private _chiTietPhim: PhimApiService, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this._activatedRoute.params.subscribe(
-      (res: any) => {        
-        this.MaPhim = res.maphim;        
+      (res: any) => {
+        this.MaPhim = res.maphim;
         this._chiTietPhim.getChiTietPhim(this.MaPhim).subscribe(
-          (res: any) => {            
+          // tslint:disable-next-line:no-shadowed-variable
+          (res: any) => {
             this.chiTietPhim = res;
           }
-        )
+        );
       }
-    )
+    );
   }
 }

@@ -7,12 +7,12 @@ export class NguoidungApiService {
   getDanhSachNguoiDung() {
     return this._httpClient.get('http://svcy2.myclass.vn/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP03');
   }
-  dangKy(form: any){
+  dangKy(form: any) {
     return this._httpClient.post('http://svcy2.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung', form.value, {
       headers: {
         'Content-Type': 'application/json;charset=UTF-8'
       }
-    })
+    });
   }
   dangNhap(nguoiDung) {
     // tslint:disable-next-line:max-line-length

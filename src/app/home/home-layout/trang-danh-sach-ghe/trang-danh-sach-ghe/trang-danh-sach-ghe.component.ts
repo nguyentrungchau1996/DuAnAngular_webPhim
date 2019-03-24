@@ -1,5 +1,5 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { PhimApiService } from 'src/app/services/phim-api.service';
+import { PhimApiService } from '../../../../services/phim-api.service';
 import { ActivatedRoute } from '@angular/router';
 import { ghe } from '../../../../_core/models/ghe';
 import { ItemGheComponent } from '../item-ghe/item-ghe.component';
@@ -10,7 +10,7 @@ import { ItemGheComponent } from '../item-ghe/item-ghe.component';
   styleUrls: ['./trang-danh-sach-ghe.component.scss']
 })
 export class TrangDanhSachGheComponent implements OnInit {
-  maLichChieu: string = "";
+  maLichChieu = '';
   danhSachGhe: ghe[] = [];
 
   mangGheDangDat: any = [];
@@ -19,15 +19,14 @@ export class TrangDanhSachGheComponent implements OnInit {
   constructor(private _chiTietPhongVe: PhimApiService, private _activatedRoutes: ActivatedRoute) { }
 
   tongTien = 0;
-  DatGhe(gheDangDat: any){
+  DatGhe(gheDangDat: any) {
     if (gheDangDat.stt) {
       this.mangGheDangDat.push(gheDangDat);
-    }
-    else {
+    } else {
       for (let i = 0; i < this.mangGheDangDat.length; i++) {
-        let gheDD = this.mangGheDangDat[i]
-        if (gheDangDat.ten === gheDD.ten){
-          this.mangGheDangDat.splice(i,1);
+        const gheDD = this.mangGheDangDat[i];
+        if (gheDangDat.ten === gheDD.ten) {
+          this.mangGheDangDat.splice(i, 1);
         }
       }
     }
@@ -37,26 +36,26 @@ export class TrangDanhSachGheComponent implements OnInit {
 
   tinhTongTien() {
     let tongTien = 0;
-    for (let i = 0; i < this.mangGheDangDat.length; i++){
+    for (let i = 0; i < this.mangGheDangDat.length; i++) {
       tongTien += this.mangGheDangDat[i].gia;
     }
     return tongTien;
   }
 
-  HuyGhe(soGheCanHuy: any){
+  HuyGhe(soGheCanHuy: any) {
+    // tslint:disable-next-line:no-shadowed-variable
     this.mangGheDangDat.forEach( (ghe: any, stt) => {
-      if (ghe.ten == soGheCanHuy){
+      if (ghe.ten === soGheCanHuy) {
         this.mangGheDangDat.splice(stt, 1);
         this.tongTien = this.tinhTongTien();
       }
-    })
-    //Đổi màu cho ghế đã hủy
+    });
     this.btnGheMuonHuy.forEach( (btnGhe: any) => {
       console.log(btnGhe);
-      if (btnGhe.ghe.TenGhe == soGheCanHuy){
+      if (btnGhe.ghe.TenGhe === soGheCanHuy) {
         btnGhe.dangDat = false;
       }
-    })
+    });
   }
 
   ngOnInit() {
@@ -65,12 +64,13 @@ export class TrangDanhSachGheComponent implements OnInit {
         console.log(res);
         this.maLichChieu = res.malichchieu;
         this._chiTietPhongVe.getChiTietPhongVe(this.maLichChieu).subscribe(
+          // tslint:disable-next-line:no-shadowed-variable
           (res: any) => {
             console.log(res);
             this.danhSachGhe = res.DanhSachGhe;
           }
-        )
+        );
       }
-    )
+    );
   }
 }

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { NguoidungApiService } from 'src/app/services/nguoidung-api.service';
+import { NguoidungApiService } from '../../services/nguoidung-api.service';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/guard/auth.service';
+import { AuthService } from '../../guard/auth.service';
 @Component({
   selector: 'app-signinadmin',
   templateUrl: './signinadmin.component.html',

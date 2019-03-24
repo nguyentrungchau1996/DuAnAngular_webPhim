@@ -32,7 +32,7 @@ export class PhimSapChieuComponent implements OnInit {
       }
     },
     nav: true
-  }
+  };
   constructor(private _phimApi: PhimApiService) { }
 
   ngOnInit() {
@@ -44,7 +44,7 @@ export class PhimSapChieuComponent implements OnInit {
       (err: any) => {
         console.log(err);
       }
-    )
+    );
   }
 
 }

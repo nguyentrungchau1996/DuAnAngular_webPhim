@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PhimApiService } from 'src/app/services/phim-api.service';
-
+import { PhimApiService } from '../../services/phim-api.service';
 @Component({
   selector: 'app-lichsunguoidung',
   templateUrl: './lichsunguoidung.component.html',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PhimApiService } from 'src/app/services/phim-api.service';
-import { itemPhim } from 'src/app/_core/models/itemPhim';
+import { PhimApiService } from '../../../../services/phim-api.service';
+import { itemPhim } from '../../../../_core/models/itemPhim';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,16 +9,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./trang-chi-tiet.component.scss']
 })
 export class TrangChiTietComponent implements OnInit {
-  maPhim: string = "";
+  maPhim  = '';
   chiTietPhim: itemPhim[] = [];
-  sttThongTin: boolean = true;
+  sttThongTin = true;
   constructor(private _activatedRoutes: ActivatedRoute, private _chiTietPhim: PhimApiService) { }
 
   hienThongTin() {
     this.sttThongTin = true;
   }
 
-  hienLichChieu(){
+  hienLichChieu() {
     this.sttThongTin = false;
   }
 
@@ -28,13 +28,14 @@ export class TrangChiTietComponent implements OnInit {
         console.log(res);
         this.maPhim = res.maphim;
         this._chiTietPhim.getChiTietPhim(this.maPhim).subscribe(
+          // tslint:disable-next-line:no-shadowed-variable
           (res: any) => {
             console.log(res);
             this.chiTietPhim = res;
           }
-        )
+        );
       }
-    )  
+    );
   }
 
 }

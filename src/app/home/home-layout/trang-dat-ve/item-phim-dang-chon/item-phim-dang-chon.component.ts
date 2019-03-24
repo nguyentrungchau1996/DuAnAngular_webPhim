@@ -10,15 +10,13 @@ export class ItemPhimDangChonComponent implements OnInit {
   @Input() phim: itemPhim;
 
   @Output() eventChonPhim = new EventEmitter();
-  trangThai: boolean = true;
+  trangThai = true;
   constructor() { }
 
-  chonPhim(){
+  chonPhim() {
     this.trangThai = !this.trangThai;
     this.eventChonPhim.emit(this.trangThai);
   }
-  ngOnInit() {
-    
-  }
+  ngOnInit() {   }
 
 }

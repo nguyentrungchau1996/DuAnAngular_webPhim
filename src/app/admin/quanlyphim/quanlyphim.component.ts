@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { PhimApiService } from 'src/app/services/phim-api.service';
+import { PhimApiService } from '../../services/phim-api.service';
 import { NgForm } from '@angular/forms';
 
 @Component({

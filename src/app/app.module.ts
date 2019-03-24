@@ -27,7 +27,7 @@ const appRoutes: Routes = [
   {path: 'danhsachghe/:malichchieu', component: TrangDanhSachGheComponent},
   { path: 'admin', component: SigninadminComponent},
   { path: 'adminhome', component: AdminindexComponent, canActivate: [LoginGuard]}
-]
+];
 
 @NgModule({
   declarations: [

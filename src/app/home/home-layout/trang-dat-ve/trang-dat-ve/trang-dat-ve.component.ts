@@ -9,7 +9,7 @@ import { PhimApiService } from '../../../../services/phim-api.service';
 })
 export class TrangDatVeComponent implements OnInit {
   danhSachPhimDangChieu: itemPhim[] = [];
-  chuaChon: boolean = true;
+  chuaChon = true;
   constructor(private _dsPhimDangChieu: PhimApiService) { }
 
   chonPhim(trangThai: any) {
@@ -21,7 +21,7 @@ export class TrangDatVeComponent implements OnInit {
       (res: any) => {
         this.danhSachPhimDangChieu = res;
       }
-    )
+    );
   }
 
 }

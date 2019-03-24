@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
-import { NguoidungApiService } from 'src/app/services/nguoidung-api.service';
+import { NguoidungApiService } from '../../services/nguoidung-api.service';
+import * as $ from '../../../../node_modules/jquery/dist/jquery';
 @Component({
   selector: 'app-adminindex',
   templateUrl: './adminindex.component.html',

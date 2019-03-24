@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NguoidungApiService } from 'src/app/services/nguoidung-api.service';
+import { NguoidungApiService } from '../../services/nguoidung-api.service';
 
 @Component({
   selector: 'app-quanlynguoidung',

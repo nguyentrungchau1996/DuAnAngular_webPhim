@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NguoidungApiService } from 'src/app/services/nguoidung-api.service';
+import { NguoidungApiService } from '../../../../../services/nguoidung-api.service';
 
 @Component({
   selector: 'app-modal',
@@ -7,14 +7,14 @@ import { NguoidungApiService } from 'src/app/services/nguoidung-api.service';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  sttDangNhap: boolean = true;
+  sttDangNhap = true;
   constructor(private _getSignIn: NguoidungApiService, private _postSignUp: NguoidungApiService) { }
 
-  onBtnDangNhap(){
+  onBtnDangNhap() {
     this.sttDangNhap = true;
   }
 
-  onBtnDangKy(){
+  onBtnDangKy() {
     this.sttDangNhap = false;
   }
 
@@ -26,11 +26,11 @@ export class ModalComponent implements OnInit {
       (err: any) => {
         console.log(err);
       }
-    )
+    );
   }
 
-  signUp(form: any){
-    form.value.MaNhom = "GP01";
+  signUp(form: any) {
+    form.value.MaNhom = 'GP01';
     this._postSignUp.dangKy(form).subscribe(
       (res: any) => {
         console.log(res);
@@ -38,7 +38,7 @@ export class ModalComponent implements OnInit {
       (err: any) => {
         console.log(err);
       }
-    )
+    );
   }
 
   ngOnInit() {

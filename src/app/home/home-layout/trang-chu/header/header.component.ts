@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { itemPhim } from 'src/app/_core/models/itemPhim';
-import { PhimApiService } from 'src/app/services/phim-api.service';
-
+import { itemPhim } from '../../../../_core/models/itemPhim';
+import { PhimApiService } from '../../../../services/phim-api.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -20,7 +19,7 @@ export class HeaderComponent implements OnInit {
       (err: any) => {
         console.log(err);
       }
-    )
+    );
   }
 
 }

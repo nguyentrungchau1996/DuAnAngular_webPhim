@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PhimApiService } from 'src/app/services/phim-api.service';
+import { PhimApiService } from '../../../../services/phim-api.service';
 import { itemPhim } from '../../../../_core/models/itemPhim';
-
 @Component({
   selector: 'app-phim-dang-chieu',
   templateUrl: './phim-dang-chieu.component.html',
@@ -32,7 +31,7 @@ export class PhimDangChieuComponent implements OnInit {
       }
     },
     nav: true
-  }
+  };
 
   constructor(private _phimApi: PhimApiService) { }
 
@@ -45,6 +44,6 @@ export class PhimDangChieuComponent implements OnInit {
       (err: any) => {
         console.log(err);
       }
-    )
+    );
   }
 }
