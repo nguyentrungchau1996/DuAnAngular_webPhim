@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Mã Ghế</th>
+      <th>Ngày Đặt</th>
+      <th>Giá Vé</th>
+      <th>Tên Phim</th>
+      <th>Rạp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let danhsach of danhSachVeDaDat | paginate: { id:'lsnd' , itemsPerPage: 5, currentPage: p }">
+      <td>{{danhsach.MaGhe}}</td>
+      <td>{{danhsach.NgayDat}}</td>
+      <td>{{danhsach.GiaVe}}</td>
+      <td>{{danhsach.TenPhim}}</td>
+      <td>{{danhsach.Rap}}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls id="lsnd" (pageChange)="p = $event"></pagination-controls>

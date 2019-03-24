@@ -1,0 +1,10 @@
+<div class="container">
+  <div>
+    <form #formDN="ngForm" class="box" (ngSubmit)="dangNhapAdmin(formDN.value)">
+      <h4 class="display-5">Đăng Nhập</h4>
+      <input type="text" name="TaiKhoan" placeholder="Username" ngModel class="form-control">
+      <input type="password" name="MatKhau" placeholder="Password" ngModel class="form-control">
+      <button type="submit" class="form-control" class="btn btn-success">Đăng nhập</button>
+    </form>
+  </div>
+</div>

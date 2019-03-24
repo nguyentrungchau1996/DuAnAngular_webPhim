@@ -1,0 +1,179 @@
+.navbar-light{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 100%;
+}
+
+.fa-bell{
+    margin-left: 700px;
+}
+.fa-comment{
+    margin-left: 20px;
+
+}
+.fa-user{
+  font-size: 15px;
+  margin-right: 10px;
+}
+.fa-sign-out-alt{
+  font-size: 15px;
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+.topbar-divider{
+    width: 0;
+    border-right: 1px solid black;
+    height: 2rem;
+    margin: auto 1rem;
+}
+.badge-counter{
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
+    transform-origin: top right;
+    right: .15rem;
+    margin-top: -.25rem;
+}
+.navbar-primary {
+    background-color: #333;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    top: 51px;
+    width: 250px;
+    z-index: 8;
+    overflow: hidden;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    margin-top: 35px;
+    margin-left: 15px;
+    border-radius: 10px  ;
+    -webkit-border-radius: 10px  ;
+    -moz-border-radius: 10px  ;
+    -ms-border-radius: 10px  ;
+    -o-border-radius: 10px  ;
+    .navbar-primary-menu{
+        .nav-label{
+            font-size: .95rem;
+        }
+    }
+}
+  
+  .navbar-primary.collapsed {
+    width: 60px;
+  }
+  
+  .navbar-primary.collapsed .glyphicon {
+    font-size: 22px;
+  }
+  
+  .navbar-primary.collapsed .nav-label {
+    display: none;
+  }
+  #chart{
+    margin-left: 50px;
+  }
+  .btn-expand-collapse {
+      position: absolute;
+      display: block;
+      left: 0px;
+      bottom:0;
+      width: 100%;
+      padding: 8px 0;
+      border-top:solid 1px #666;
+      color: grey;
+      font-size: 20px;
+      text-align: center;
+  }
+  .lsdv{
+    padding-right: 10px;
+  }
+  .btn-expand-collapse:hover,
+  .btn-expand-collapse:focus {
+      background-color: #222;
+      color: white;
+  }
+  .btn-expand-collapse:active {
+      background-color: #111;
+  }
+  
+  .navbar-primary-menu,
+  .navbar-primary-menu li {
+    margin:0; padding:0;
+    list-style: none;
+  }
+  
+  .navbar-primary-menu li a {
+    display: block;
+    padding: 10px 18px;
+    text-align: left;
+    border-bottom:solid 1px #444;
+    color: #ccc;
+  }
+  
+  .navbar-primary-menu li a:hover {
+    background-color: #000;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navbar-primary-menu li a .glyphicon {
+    margin-right: 6px;
+  }
+  
+  .navbar-primary-menu li a:hover .glyphicon {
+    color: orchid;
+  }
+  
+  .main-content {
+    margin-top: 60px;
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .collapsed + .main-content {
+    margin-left: 60px;
+  }
+  @media screen and (max-width: 992px){
+    .navbar{
+      width: 100%;
+      margin: auto;
+    }
+    .fa-bell{
+      margin-left: 400px;
+    }
+    .navbar-primary{
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .navbar{
+      width: 100%;
+      margin: auto;
+    }
+    .fa-bell{
+      margin-left: 20px;
+    }
+    .navbar-primary{
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: 576px){
+    .fa-user{
+      font-size: 15px;
+    }
+    .fa-sign-out-alt{
+      padding-left: 308px;
+    }
+    .navbar-primary{
+      margin-top: 50px;
+      height: 500px;
+    }
+  }

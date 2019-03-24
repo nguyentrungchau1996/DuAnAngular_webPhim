@@ -18,6 +18,7 @@ import { DienAnhComponent } from './dien-anh/dien-anh.component';
 import { ItemTinTucComponent } from './item-tin-tuc/item-tin-tuc.component';
 import { RouterModule } from '@angular/router';
 import { ItemPhimHeaderComponent } from './item-phim-header/item-phim-header.component';
+import { ModalModule } from './modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ItemPhimHeaderComponent } from './item-phim-header/item-phim-header.com
     ItemPhimHeaderComponent,
   ],
   imports: [
-    CommonModule, HttpClientModule, CarouselModule, RouterModule
+    CommonModule, HttpClientModule, CarouselModule, RouterModule, ModalModule
   ],
   exports: [
     TrangChuComponent,
@@ -55,7 +56,7 @@ import { ItemPhimHeaderComponent } from './item-phim-header/item-phim-header.com
     LoaiTinTucComponent,
     DienAnhComponent,
     ItemTinTucComponent,
-    ItemPhimHeaderComponent
+    ItemPhimHeaderComponent,
   ]
 })
 export class TrangChuModule { }

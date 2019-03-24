@@ -12,6 +12,11 @@ import { TrangChuComponent } from './home/home-layout/trang-chu/trang-chu/trang-
 import { TrangDatVeComponent } from './home/home-layout/trang-dat-ve/trang-dat-ve/trang-dat-ve.component';
 import { ItemPhimLichChieuComponent } from './home/home-layout/trang-dat-ve/item-phim-lich-chieu/item-phim-lich-chieu.component';
 import { TrangDanhSachGheComponent } from './home/home-layout/trang-danh-sach-ghe/trang-danh-sach-ghe/trang-danh-sach-ghe.component';
+import { AdminModule } from './admin/admin.module';
+import { SigninadminComponent } from './admin/signinadmin/signinadmin.component';
+import { ChartsModule } from 'ng2-charts';
+import { AdminindexComponent } from './admin/adminindex/adminindex.component';
+import { LoginGuard } from './guard/login.guard';
 
 const appRoutes: Routes = [
   { path: '', component: TrangChuComponent},
@@ -19,7 +24,9 @@ const appRoutes: Routes = [
   { path: 'datve', component: TrangDatVeComponent, children: [
     {path: 'chonphim/:maphim', component: ItemPhimLichChieuComponent}
   ]},
-  {path: 'danhsachghe/:malichchieu', component: TrangDanhSachGheComponent}
+  {path: 'danhsachghe/:malichchieu', component: TrangDanhSachGheComponent},
+  { path: 'admin', component: SigninadminComponent},
+  { path: 'adminhome', component: AdminindexComponent, canActivate: [LoginGuard]}
 ]
 
 @NgModule({
@@ -31,7 +38,9 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HomeModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AdminModule,
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

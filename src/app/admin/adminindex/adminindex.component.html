@@ -1,0 +1,61 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <div class="container-fluid">
+  <nav class="navbar navbar-light" style="background-color: #34495e;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" >WebPhim</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <i class="far fa-bell">
+          <span class="badge badge-danger badge-counter">3+</span>
+        </i>
+        <i class="far fa-comment">
+          <span class="badge badge-danger badge-counter">7</span>
+        </i>
+        <div class="topbar-divider d-none d-sm-block"></div>
+        <div>
+            <i class="far fa-user"></i> 
+            <span>Hello darkness</span>
+        </div>
+        <div class="dangxuat">
+          <i class="fas fa-sign-out-alt"></i>
+          <span><a [routerLink]="['/admin']">Đăng Xuất</a></span>
+        </div>
+    </nav>
+  </nav>
+  <nav class="navbar-primary" style="background-color: #34495e;">
+    <a  class="btn-expand-collapse"><i class="fas fa-angle-double-left"></i><span class="glyphicon glyphicon-menu-left"></span></a>
+    <ul class="navbar-primary-menu">
+      <li>
+        <a data-toggle="collapse" data-target="#chart">
+          <span class="glyphicon glyphicon-list-alt">
+            <i class="far fa-chart-bar"></i>
+          </span>
+          <span class="nav-label">Thống Kê</span>
+        </a>
+        <div id="chart" class="collapse"><a data-toggle="collapse" data-target="#lsdv"><span class="glyphicon glyphicon-cog"><i class="fas fa-pencil-alt"></i></span><span class="nav-label">Lịch Sử Đặt Vé</span></a></div>
+        <div id="chart" class="collapse"><a data-toggle="collapse" data-target="#tknd"><span class="glyphicon glyphicon-cog"><i class="fas fa-pencil-alt"></i></span><span class="nav-label">Thống Kê Người Dùng</span></a></div>
+        <div id="chart" class="collapse"><a data-toggle="collapse" data-target="#tkp"><span class="glyphicon glyphicon-cog"><i class="fas fa-pencil-alt"></i></span><span class="nav-label">Thống Kê Phim</span></a></div>
+        <a data-toggle="collapse" data-target="#qlnd"><span class="glyphicon glyphicon-envelope"><i class="fas fa-user"></i></span><span class="nav-label">Quản Lý Người Dùng</span></a>
+        <a data-toggle="collapse" data-target="#qlp"><span class="glyphicon glyphicon-cog"><i class="fas fa-video"></i></span><span class="nav-label">Quản Lý Phim</span></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <div id="lsdv" class="collapse">
+      <app-lichsunguoidung></app-lichsunguoidung>
+    </div>
+    <div id="tknd" class="collapse">
+      <app-chartuser></app-chartuser>
+    </div>
+    <div id="tkp" class="collapse">
+      <app-chartfilm></app-chartfilm>
+    </div>
+    <div id="qlnd" class="collapse">
+      <app-quanlynguoidung></app-quanlynguoidung>
+    </div>
+    <div id="qlp" class="collapse">
+      <app-quanlyphim></app-quanlyphim>
+    </div>
+  </div>
+</div>
